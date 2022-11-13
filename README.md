@@ -6,62 +6,6 @@
 [![Download Stats](https://img.shields.io/pypi/dm/poetry)](https://pypistats.org/packages/poetry)
 [![Discord](https://img.shields.io/discord/487711540787675139?logo=discord)][Discord]
 
-Poetry helps you declare, manage and install dependencies of Python projects,
-ensuring you have the right stack everywhere.
-
-Poetry replaces `setup.py`, `requirements.txt`, `setup.cfg`, `MANIFEST.in` and `Pipfile` with a simple `pyproject.toml`
-based project format.
-
-```toml
-[tool.poetry]
-name = "my-package"
-version = "0.1.0"
-description = "The description of the package"
-
-license = "MIT"
-
-authors = [
-    "Sébastien Eustace <sebastien@eustace.io>"
-]
-
-repository = "https://github.com/python-poetry/poetry"
-homepage = "https://python-poetry.org"
-
-# README file(s) are used as the package description
-readme = ["README.md", "LICENSE"]
-
-# Keywords (translated to tags on the package index)
-keywords = ["packaging", "poetry"]
-
-[tool.poetry.dependencies]
-# Compatible Python versions
-python = ">=3.8"
-# Standard dependency with semver constraints
-aiohttp = "^3.8.1"
-# Dependency with extras
-requests = { version = "^2.28", extras = ["security"] }
-# Version-specific dependencies with prereleases allowed
-tomli = { version = "^2.0.1", python = "<3.11", allow-prereleases = true }
-# Git dependencies
-cleo = { git = "https://github.com/python-poetry/cleo.git", branch = "master" }
-# Optional dependencies (installed by extras)
-pendulum = { version = "^2.1.2", optional = true }
-
-# Dependency groups are supported for organizing your dependencies
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.1.2"
-pytest-cov = "^3.0"
-
-# ...and can be installed only when explicitly requested
-[tool.poetry.group.docs]
-optional = true
-[tool.poetry.group.docs.dependencies]
-Sphinx = "^5.1.1"
-
-# Python-style entrypoints and scripts are easily expressed
-[tool.poetry.scripts]
-my-script = "my_package:main"
-```
 
 ## Installation
 
@@ -98,15 +42,3 @@ provides helpful guidance.
   [Discord]: https://discord.com/invite/awxPgve
   [install.python-poetry.org]: https://install.python-poetry.org
   [Installation Documentation]: https://python-poetry.org/docs/#installation
-
-## Related Projects
-
-* [poetry-core](https://github.com/python-poetry/poetry-core): PEP 517 build-system for Poetry projects, and
-dependency-free core functionality of the Poetry frontend
-* [poetry-plugin-export](https://github.com/python-poetry/poetry-plugin-export): Export Poetry projects/lock files to
-foreign formats like requirements.txt
-* [poetry-plugin-bundle](https://github.com/python-poetry/poetry-plugin-bundle): Install Poetry projects/lock files to
-external formats like virtual environments
-* [install.python-poetry.org](https://github.com/python-poetry/install.python-poetry.org): The official Poetry
-installation script
-* [website](https://github.com/python-poetry/website): The official Poetry website and blog
