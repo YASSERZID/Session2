@@ -1,5 +1,8 @@
 # Poetry: Python packaging and dependency management made easy
 
+
+![coverage badge](./coverage.svg)
+
 [![Stable Version](https://img.shields.io/pypi/v/poetry?label=stable)][PyPI Releases]
 [![Pre-release Version](https://img.shields.io/github/v/release/python-poetry/poetry?label=pre-release&include_prereleases&sort=semver)][PyPI Releases]
 [![Python Versions](https://img.shields.io/pypi/pyversions/poetry)][PyPI]
